@@ -4,4 +4,11 @@ checkout     commit    status
 add            diff     log
                         reflog
 						reset --hard
+						
+commit之后无法消除记录
+暂存区的变化回退   git checkout
+add之后的暂存区回到工作区（Unstaged）   git reset HEAD file
+工作区的变化回退   git checkout
+
+add和commit之前的操作
     
