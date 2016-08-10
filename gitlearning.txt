@@ -18,4 +18,10 @@ git add和git rm都是提交到暂存区
 可以用git reset HEAD file退出暂存区（Unstaged）
 所以直接rm的文件（工作区层面的操作）可以直接checkout
 但是git rm 的文件（暂存区的层面）需要先退出暂存区，再进行checkout
+
+要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+如git remote add origin git@github.com:paraL/learngit.git
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
     
