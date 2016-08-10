@@ -2,7 +2,7 @@ git
 工作区       暂存区   仓库
 checkout     commit    status
 add            diff     log
-                        reflog
+               reset     reflog
 						reset --hard
 						
 commit之后无法消除记录
@@ -11,4 +11,11 @@ add之后的暂存区回到工作区（Unstaged）   git reset HEAD file
 工作区的变化回退   git checkout
 
 add和commit之前的操作
+工作区的删除rm file 可以用checkout恢复
+
+
+git add和git rm都是提交到暂存区
+可以用git reset HEAD file退出暂存区（Unstaged）
+所以直接rm的文件（工作区层面的操作）可以直接checkout
+但是git rm 的文件（暂存区的层面）需要先退出暂存区，再进行checkout
     
